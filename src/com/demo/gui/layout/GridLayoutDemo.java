@@ -1,7 +1,7 @@
 /**
  * Íø¸ñ²¼¾Ö
  */
-package com.demo.gui;
+package com.demo.gui.layout;
 import java.awt.*;
 import javax.swing.*;
 public class GridLayoutDemo extends JFrame{

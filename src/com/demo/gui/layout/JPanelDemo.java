@@ -1,7 +1,7 @@
 /**
  * 多种布局管理器的使用
  */
-package com.demo.gui;
+package com.demo.gui.layout;
 
 import java.awt.*;
 import javax.swing.*;

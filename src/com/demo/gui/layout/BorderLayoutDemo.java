@@ -1,7 +1,7 @@
 /**
  * ±ß½ç²¼¾Ö
  */
-package com.demo.gui;
+package com.demo.gui.layout;
 
 import java.awt.*;
 import javax.swing.*;

@@ -1,7 +1,7 @@
 /**
  * 流式布局
  */
-package com.demo.gui;
+package com.demo.gui.layout;
 
 import java.awt.*;
 import javax.swing.*;
