@@ -7,7 +7,7 @@ import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
 
-public class IODemo6 {
+public class IODemo6_DataOutputStream {
 	public static void main(String[] args) throws IOException {
 		FileOutputStream fos = new FileOutputStream("output2.txt");
 		BufferedOutputStream bos = new BufferedOutputStream(fos);

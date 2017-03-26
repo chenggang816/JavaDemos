@@ -6,7 +6,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 
-public class IODemo2 {
+public class IODemo2_InputStream {
 	public static void main(String[] args) throws IOException{
 		InputStream in = null;
 		OutputStream out = null;

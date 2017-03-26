@@ -8,7 +8,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class IODemo4L {
+public class IODemo4L_BufferedReader {
 	public static void main(String[] args) throws IOException{
 		BufferedReader in = null;
 		BufferedWriter out = null;

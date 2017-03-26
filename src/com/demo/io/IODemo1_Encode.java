@@ -2,7 +2,7 @@ package com.demo.io;
 
 import java.io.IOException;
 
-public class IODemo1 {
+public class IODemo1_Encode {
 	public static void main(String[] args) throws IOException{
 		String s = "¼ÆËã»ú";
 		String str = null;

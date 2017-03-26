@@ -5,7 +5,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 
 
-public class IODemo3 {
+public class IODemo3_FileReader {
 	public static void main(String[] args) throws IOException{
 		FileReader in = null;
 		FileWriter out = null;
