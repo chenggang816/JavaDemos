@@ -12,7 +12,7 @@ public class ClientDemo {
 	static Socket socket;
 	public static void main(String[] args) throws UnknownHostException, IOException {
 		System.err.println("Client");
-		socket = new Socket("127.0.0.1",8000);
+		socket = new Socket("192.168.101.133",8000);
 		
 		Thread serverSay = new ServerSay();
 		serverSay.start();
@@ -25,7 +25,9 @@ public class ClientDemo {
 		System.out.println("请输入内容......输入“再见”退出");
 		while (!(line = sin.readLine()).equals("再见")) {
 			out.println(line);
-			
+			if(line == null){
+				break;
+			}			
 		}
 		
 		out.close();
@@ -40,12 +42,13 @@ public class ClientDemo {
 			//接收服务器端的输入
 			try {
 				in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
-				while(socket.isConnected()){
-					System.out.println("Server:" + in.readLine());
+				String line ;
+				while((line= in.readLine()) != null){
+					System.out.println("Server:" + line);
 				}	
 			} catch (IOException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
+				System.out.println("连接已断开");
+//				e.printStackTrace();
 			}finally{
 				
 			}
