@@ -12,7 +12,8 @@ public class ClientDemo {
 	static Socket socket;
 	public static void main(String[] args) throws UnknownHostException, IOException {
 		System.err.println("Client");
-		socket = new Socket("192.168.101.133",8000);
+//		socket = new Socket("192.168.101.133",8000);
+		socket = new Socket("127.0.0.1",8000);
 		
 		Thread serverSay = new ServerSay();
 		serverSay.start();
