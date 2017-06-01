@@ -1,0 +1,8 @@
+javac Student.java
+javac *.java
+javac -classpath D:/junit.jar *.java
+javac -cp D:/junit.jar *.java
+javac -cp ../../lib/junit.jar *.java
+
+java -cp .;D:/junit.jar junit.awtui.TestRunner StudentTest
+java -cp .;D:/junit.jar junit.awtui.TestRunner studentinfo.AllTest

@@ -1,33 +1,39 @@
 package com.demo.thread;
 /**
- * 线程合并的信义是将几个并行线程合并为一个单线程执行
- * 应用场景是当一个线程必须等待另一个线程执行完毕才能执行时可以使用join方法
+ * 锟竭程合诧拷锟斤拷锟斤拷锟斤拷锟角斤拷锟斤拷锟斤拷锟斤拷锟斤拷锟竭程合诧拷为一锟斤拷锟斤拷锟竭筹拷执锟斤拷
+ * 应锟矫筹拷锟斤拷锟角碉拷一锟斤拷锟竭程憋拷锟斤拷却锟斤拷锟揭伙拷锟斤拷叱锟街达拷锟斤拷锟较诧拷锟斤拷执锟斤拷时锟斤拷锟斤拷使锟斤拷join锟斤拷锟斤拷
  * @author cg
  *
  */
 public class JoinDemo {
 	public static void main(String[] args) throws InterruptedException {
-		Thread t1 = new JoinThread1();
-		t1.start();
-		Thread.sleep(300);
+		Thread t2 = new JoinThread1("T2");
+		t2.start();
 		
-		for (int i = 0; i < 20; i++) {
-			System.err.println("主线程第" + i + "次执行");
-			Thread.sleep(100);
-			if (i > 2) {
-				//t1线程合并到主线程中，主线程停止执行过程，转而执行t1线程，直到t1线程执行完毕后继续
-				t1.join();
-			}
-		}
+		Thread.sleep(500);
+		
+		Thread t1 = new JoinThread1("T1");
+		t1.start();
+		
+		System.out.println("Thread T1 is goint to join");
+		t1.join();
+		
+		System.out.println("Thread T2 is goint to join");
+		t2.join();
+		
+		System.out.println("Main thread exited");
 	}
 }
 
 class JoinThread1 extends Thread{
+	public JoinThread1(String name) {
+		setName(name);
+	}
 	@Override
 	public void run() {
 		// TODO Auto-generated method stub
 		for (int i = 0; i < 20; i++) {
-			System.out.println("线程1第" + i + "次执行");
+			System.out.println("Thead:" + getName() + "\t" + i);
 			try {
 				Thread.sleep(100);
 			} catch (InterruptedException e) {
@@ -35,5 +41,6 @@ class JoinThread1 extends Thread{
 				e.printStackTrace();
 			}
 		}
+		System.out.printf("SubThread %s has exited.\n", getName());
 	}
 }
